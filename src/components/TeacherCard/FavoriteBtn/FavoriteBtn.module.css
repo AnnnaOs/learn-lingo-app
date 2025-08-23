@@ -1,0 +1,29 @@
+.heartBtn {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  right: 20px;
+
+  .icon {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: var(--main-text);
+    transition: stroke var(--transition);
+  }
+
+  &:hover .icon {
+    stroke: var(--theme-color);
+    transform: scale(0.95);
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 24px;
+    right: 24px;
+  }
+}
+
+.active .icon {
+  fill: var(--theme-color);
+  stroke: none;
+}

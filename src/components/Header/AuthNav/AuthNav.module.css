@@ -1,0 +1,113 @@
+.authNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+}
+
+.loginBtn,
+.registerBtn,
+.mobRegisterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.loginBtn {
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  color: var(--main-text);
+  border: 1px solid var(--theme-color-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: color var(--transition), transform var(--transition), background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--background-white);
+    transform: scale(0.95);
+    background-color: var(--theme-color-light);
+  }
+
+  &:hover svg {
+    stroke: var(--background-white);
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.mobRegisterBtn {
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  color: var(--main-text);
+  border: 1px solid var(--theme-color-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: color var(--transition), transform var(--transition), background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--background-white);
+    transform: scale(0.95);
+    background-color: var(--theme-color-light);
+  }
+
+  &:hover svg {
+    stroke: var(--background-white);
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--main-text);
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  bottom: -70%;
+  left: 50%;
+  background-color: #f0f0f0;
+  color: var(--gray-text);
+  padding: 4px 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 400;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transition: opacity var(--transition);
+}
+
+.registerBtn {
+  padding: 14px 39px;
+  background-color: var(--main-text);
+  color: var(--background-white);
+  transition: background-color var(--transition), transform var(--transition);
+
+  &:hover,
+  &:focus {
+    transform: scale(0.95);
+    background-color: var(--theme-color-light);
+  }
+}

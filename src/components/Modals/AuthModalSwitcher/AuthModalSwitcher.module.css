@@ -1,0 +1,15 @@
+.switcherText {
+  text-align: center;
+  font-weight: 500;
+}
+
+.switcherBtn {
+  text-decoration: underline;
+  font-weight: 700;
+  padding-left: 8px;
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--theme-color);
+  }
+}

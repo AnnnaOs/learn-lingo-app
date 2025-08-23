@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  background-color: var(--background-white);
+}
+
+.teachersPage {
+  background-color: var(--background-gray);
+  padding: 32px 0 96px;
+  min-height: 100vh;
+}
+
+.teachersList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+}
+
+.notFoundText {
+  padding-top: 32px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gray-text)
+}
+
+.container {
+  max-width: 430px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 128px;
+  }
+}

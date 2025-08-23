@@ -1,0 +1,34 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.link {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  line-height: 1.25;
+  padding: 9px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--theme-color-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: color var(--transition), transform var(--transition), background-color var(--transition);
+}
+
+.active {
+  background-color: var(--theme-color-light);
+}
+
+.link:not(.active):hover {
+  transform: scale(0.95);
+  color: var(--background-white);
+  background-color: var(--theme-color-light);
+  border: none;
+}

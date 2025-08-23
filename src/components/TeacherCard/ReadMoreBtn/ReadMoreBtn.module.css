@@ -1,0 +1,14 @@
+.readMoreBtn {
+  display: flex;
+  margin: 16px auto 0 auto;
+  border-bottom: 2px solid var(--theme-color);
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--theme-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 16px 0 0;
+  }
+}

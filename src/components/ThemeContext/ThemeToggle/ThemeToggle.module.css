@@ -1,0 +1,103 @@
+.themesBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 12px;
+  border: 1px solid var(--theme-color-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: var(--theme-color-light);
+  transition: transform var(--transition), background-color var(--transition);
+
+  &:hover {
+    transform: scale(0.95);
+    background-color: var(--theme-color-light);
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--main-text);
+    transition: stroke var(--transition);
+  }
+
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: -70%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    color: var(--gray-text);
+    padding: 4px 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  &:hover svg {
+    stroke: var(--background-white);
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-color: transparent;
+  }
+}
+
+.list {
+  position: absolute;
+  padding: 5px;
+  max-width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+  background-color: var(--background-white);
+  border-radius: 12px;
+  border: 1px solid var(--theme-color-light);
+}
+
+.itemBtn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition);
+  padding: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 12px;
+  border: solid var(--background-white);
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+}

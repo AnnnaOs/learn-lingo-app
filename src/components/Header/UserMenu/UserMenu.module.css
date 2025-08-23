@@ -1,0 +1,84 @@
+.userMenuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.userName {
+  font-size: 24px;
+}
+
+.separator {
+  height: 50px;
+  width: 2px;
+  background-color: var(--theme-color);
+  transform: rotate(90deg);
+
+  @media screen and (min-width: 768px) {
+    transform: rotate(0deg);
+    height: 30px;
+  }
+}
+
+.listBtn {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--theme-color-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition), background-color var(--transition);
+
+  &:hover {
+    transform: scale(0.95);
+    background-color: var(--theme-color-light);
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--main-text);
+    transition: stroke var(--transition);
+  }
+
+  &:hover svg {
+    stroke: var(--background-white);
+  }
+
+  .tooltip {
+    position: absolute;
+    z-index: 10;
+    bottom: -70%;
+    left: 50%;
+    background-color: #f0f0f0;
+    color: var(--gray-text);
+    padding: 4px 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,23 @@
+.levelList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .levelItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-select);
+    border-radius: 35px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.14286;
+    background-color: transparent;
+    transition: background-color var(--transition), border-color var(--transition);
+  }
+
+  .activeLevel {
+    background-color: var(--theme-color);
+    border-color: transparent;
+  }
+}

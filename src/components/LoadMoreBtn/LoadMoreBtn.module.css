@@ -1,0 +1,23 @@
+.loadMoreBtn {
+  display: flex;
+  border-radius: 12px;
+  padding: 16px 48px;
+  background-color: var(--theme-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.55556;
+  margin: 64px auto 0;
+  box-shadow: 0 4px 8px var(--theme-color-light);
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.loadMoreBtn:disabled {
+  background-color: var(--gray-select);
+  cursor: not-allowed;
+}
+
+.loadMoreBtn:hover:not(:disabled),
+.loadMoreBtn:focus:not(:disabled) {
+  background-color: var(--theme-color-light);
+  transform: scale(0.95);
+}

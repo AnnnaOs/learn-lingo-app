@@ -1,0 +1,43 @@
+:root {
+  --transition: 0.3s linear;
+  --font-family: "Roboto", sans-serif;
+
+  --background-white: #ffffff;
+  --background-gray: #f8f8f8;
+  --main-text: #121417;
+  --gray-text: #8a8a89;
+  --green: #38CD3E;
+  --error: #c91616;
+  --border-input: rgba(18, 20, 23, 0.1);
+  --gray-select: rgba(18, 20, 23, 0.2);
+  --statistic-text: rgba(18, 20, 23, 0.7);
+  --popup-second-text: rgba(18, 20, 23, 0.8);
+
+  --theme-color: #F4C550;
+  --theme-color-light: #FBE9BA;
+}
+
+:root[data-theme='theme-yellow'] {
+  --theme-color: #F4C550;
+  --theme-color-light: #FBE9BA;
+}
+
+:root[data-theme='theme-blue'] {
+  --theme-color: #9FB7CE;
+  --theme-color-light: #BFD6EA;
+}
+
+:root[data-theme='theme-green'] {
+  --theme-color: #9FBAAE;
+  --theme-color-light: #CBDED3;
+}
+
+:root[data-theme='theme-red'] {
+  --theme-color: #E0A39A;
+  --theme-color-light: #F2C0BD;
+}
+
+:root[data-theme='theme-orange'] {
+  --theme-color: #F0AA8D;
+  --theme-color-light: #F4C8BA;
+}
