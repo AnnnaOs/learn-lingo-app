@@ -4,7 +4,7 @@
   max-width: 410px;
   border-radius: 30px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto 24px;
   padding: 20px;
 
   @media screen and (min-width: 768px) {
