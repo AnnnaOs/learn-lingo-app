@@ -1,5 +1,5 @@
 const Icon = ({ name, className }) => (
-  <svg className={className} aria-hidden="true">
+  <svg className={className}>
     <use href={`/icons.svg#${name}`} />
   </svg>
 );

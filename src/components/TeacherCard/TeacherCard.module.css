@@ -173,24 +173,25 @@
 }
 
 .bookLessonBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   border-radius: 12px;
   padding: 16px 48px;
-  margin: 0 auto;
-  width: 232px;
+  width: 100%;
   background-color: var(--theme-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.55556;
   color: var(--main-text);
-  box-shadow: 0 4px 8px var(--theme-color-light);
   transition: background-color var(--transition), transform var(--transition);
 
   &:hover {
     background-color: var(--theme-color-light);
     transform: scale(0.95);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    width: 232px;
   }
 
   @media screen and (min-width: 1200px) {

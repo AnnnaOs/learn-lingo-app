@@ -39,8 +39,8 @@ const Router = () => {
               </PrivateRoute>
             }
           />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Suspense>
   );

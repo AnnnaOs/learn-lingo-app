@@ -1,15 +1,13 @@
 html {
   scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 body {
+  width: 100%;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100vh;
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 500;
@@ -20,7 +18,7 @@ body {
 
 .teachersPage {
   background-color: var(--background-gray);
-  padding: 32px 0 96px;
+  padding: 32px 0 64px;
   min-height: 100vh;
 }
 

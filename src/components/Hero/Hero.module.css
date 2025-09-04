@@ -1,5 +1,5 @@
 .hero {
-  padding-bottom: 10px;
+  padding-bottom: 24px;
 }
 
 .heroContainer {
@@ -31,10 +31,10 @@
 }
 
 .textContent {
-  background-color: var(--background-gray);
   border-radius: 30px;
   padding: 15px 20px;
   margin-bottom: 24px;
+  background-color: var(--background-gray);
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
@@ -43,7 +43,7 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: start;
     justify-content: center;
     padding: 48px 88px 48px 64px;
     width: 100%;
@@ -51,7 +51,7 @@
   }
 
   @media screen and (min-width: 1440px) {
-    padding: 98px 108px 98px 64px;
+    padding: 98px 64px;
     max-width: 720px;
     height: 530px;
   }
@@ -70,12 +70,10 @@
   @media screen and (min-width: 1200px) {
     margin-bottom: 32px;
     font-size: 40px;
-    max-width: 548px;
   }
 
   @media screen and (min-width: 1440px) {
     font-size: 48px;
-    max-width: 548px;
   }
 }
 
@@ -114,7 +112,7 @@
 
   @media screen and (min-width: 1440px) {
     margin-bottom: 64px;
-    padding-right: 77px;
+    max-width: 471px;
   }
 }
 
@@ -122,12 +120,12 @@
   display: block;
   border-radius: 12px;
   padding: 16px 25px;
-  background-color: var(--theme-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.55556;
   text-align: center;
   margin-top: auto;
+  background-color: var(--theme-color);
   box-shadow: 0 4px 8px var(--theme-color-light);
   transition: background-color var(--transition), transform var(--transition);
 
