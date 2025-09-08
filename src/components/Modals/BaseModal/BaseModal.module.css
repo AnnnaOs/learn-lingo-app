@@ -1,6 +1,6 @@
 .backdrop {
   position: fixed;
-  z-index: 9999;
+  z-index: 9998;
   inset: 0;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@
   max-width: 450px;
   width: 90%;
   padding: 36px;
-  overflow: hidden;
+  overflow-y: auto;
   border-radius: 30px;
   background-color: var(--background-white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -34,8 +34,6 @@
   align-items: center;
   top: 20px;
   right: 20px;
-  /* width: 32px;
-  height: 32px; */
 
   .icon {
     width: 32px;
@@ -47,11 +45,6 @@
   &:hover svg {
     stroke: var(--theme-color);
     transform: scale(0.95);
-  }
-
-  @media screen and (min-width: 768px) {
-    top: 20px;
-    right: 20px;
   }
 }
 

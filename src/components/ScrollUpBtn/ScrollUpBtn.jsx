@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
 import Icon from '../Icon/Icon';
@@ -24,7 +25,7 @@ const ScrollUpBtn = ({ hide }) => {
 
   return (
     <button
-      className={`${s.btn} ${isVisible ? s.visible : ''}`}
+      className={clsx(s.btn, { [s.visible]: isVisible })}
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >

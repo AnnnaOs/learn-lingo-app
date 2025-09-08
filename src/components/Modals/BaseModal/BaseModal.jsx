@@ -21,14 +21,11 @@ const BaseModal = ({
 
   useEffect(() => {
     if (!isOpen) return;
-
     const handleEscape = e => {
       if (e.key === 'Escape') onClose();
     };
-
     document.addEventListener('keydown', handleEscape);
     document.body.style.overflow = 'hidden';
-
     return () => {
       document.removeEventListener('keydown', handleEscape);
       document.body.style.overflow = 'unset';
@@ -65,7 +62,6 @@ const BaseModal = ({
               {title}
             </h2>
             {subtitle && <p className={s.subtitle}>{subtitle}</p>}
-
             {teacher && (
               <div className={s.teacherWrap}>
                 <img

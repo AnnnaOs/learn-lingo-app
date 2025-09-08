@@ -46,6 +46,7 @@ const App = () => {
             fontWeight: 400,
             padding: '12px',
             textAlign: 'center',
+            zIndex: 9999,
           },
         }}
       />

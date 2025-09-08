@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import Icon from '../Icon/Icon';
 import s from './Forms.module.css';
 
@@ -11,7 +13,7 @@ const AuthForm = ({ register, errors, mode, showPassword, togglePassword }) => {
             type="text"
             placeholder=" "
             autoComplete="name"
-            className={`${s.input} ${errors.name ? s.errorInput : ''}`}
+            className={clsx(s.input, { [s.errorInput]: errors.name })}
             required
             {...register('name')}
           />
@@ -28,7 +30,7 @@ const AuthForm = ({ register, errors, mode, showPassword, togglePassword }) => {
           type="email"
           placeholder=" "
           autoComplete="email"
-          className={`${s.input} ${errors.email ? s.errorInput : ''}`}
+          className={clsx(s.input, { [s.errorInput]: errors.email })}
           required
           {...register('email')}
         />
@@ -46,7 +48,7 @@ const AuthForm = ({ register, errors, mode, showPassword, togglePassword }) => {
           autoComplete={
             mode === 'register' ? 'new-password' : 'current-password'
           }
-          className={`${s.input} ${errors.password ? s.errorInput : ''}`}
+          className={clsx(s.input, { [s.errorInput]: errors.password })}
           required
           {...register('password')}
         />

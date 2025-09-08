@@ -16,13 +16,13 @@ import './styles/index.css';
 initModalRoot();
 
 createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <ThemeProvider>
+  <ThemeProvider>
+    <Provider store={store}>
       <BrowserRouter>
         <Suspense fallback={<Loader />}>
           <App />
         </Suspense>
       </BrowserRouter>
-    </ThemeProvider>
-  </Provider>
+    </Provider>
+  </ThemeProvider>
 );

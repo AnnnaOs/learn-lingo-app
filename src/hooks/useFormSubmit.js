@@ -23,13 +23,18 @@ export const useFormSubmit = (type, onClose, reset, closeMobMenu) => {
 
       reset();
       onClose();
+
       if (closeMobMenu) closeMobMenu();
     } catch (error) {
-      console.log('Login error:', error);
+      console.error('Form submit error:', error);
 
-      const errorMessage =
-        getErrorMessage(error?.code) || error?.message || 'Something went wrong';
-      toast.error(errorMessage);
+      if (error?.code) {
+        toast.error(getErrorMessage(error.code));
+      } else if (error?.message) {
+        toast.error(error.message);
+      } else {
+        toast.error('Something went wrong. Please try again.');
+      }
     }
   };
 

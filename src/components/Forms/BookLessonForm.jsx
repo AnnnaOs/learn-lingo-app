@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import s from './Forms.module.css';
 
 const BookLessonForm = ({ register, errors }) => {
@@ -11,7 +13,7 @@ const BookLessonForm = ({ register, errors }) => {
 
   return (
     <>
-      <fieldset className={s.radioGroup}>
+      <fieldset className={s.fieldset}>
         <legend className={s.legend}>
           What is your main reason for learning English?
         </legend>
@@ -37,7 +39,7 @@ const BookLessonForm = ({ register, errors }) => {
           type="text"
           placeholder=" "
           autoComplete="name"
-          className={`${s.input} ${errors.fullName ? s.errorInput : ''}`}
+          className={clsx(s.input, { [s.errorInput]: errors.fullName })}
           required
           {...register('fullName')}
         />
@@ -55,7 +57,7 @@ const BookLessonForm = ({ register, errors }) => {
           type="email"
           placeholder=" "
           autoComplete="email"
-          className={`${s.input} ${errors.email ? s.errorInput : ''}`}
+          className={clsx(s.input, { [s.errorInput]: errors.email })}
           required
           {...register('email')}
         />
@@ -71,7 +73,7 @@ const BookLessonForm = ({ register, errors }) => {
           type="tel"
           placeholder=" "
           autoComplete="tel"
-          className={`${s.input} ${errors.phoneNumber ? s.errorInput : ''}`}
+          className={clsx(s.input, { [s.errorInput]: errors.phoneNumber })}
           required
           {...register('phoneNumber')}
         />
